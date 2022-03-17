@@ -10,7 +10,13 @@ public class solution_2 {
         System.out.println("Give str3:");
         String str3 = scan.nextLine();
 
-        System.out.println("Valid shuffle: " +shufflestrings(str1, str2, str3));
+        //System.out.println("Valid shuffle: " +shufflestrings(str1, str2, str3));
+        if(shufflestrings(str1, str2, str3)==true){
+            System.out.println("valid shuffle");
+        }
+        else{
+            System.out.println("invalid shuffle");
+        }
     }
 
     private static boolean shufflestrings(String str1, String str2, String CheckInString) {
@@ -35,7 +41,7 @@ public class solution_2 {
 
         }
             return true;
-            
+
         }
     }
 
