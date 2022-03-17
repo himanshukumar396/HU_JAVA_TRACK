@@ -9,8 +9,7 @@ public class solution_2 {
         String str2 = scan.nextLine();
         System.out.println("Give str3:");
         String str3 = scan.nextLine();
-        //System.out.println("The given string is: " + str3);
-        //System.out.println("The interleaving strings are " + str1 + " and " + str2);
+
         System.out.println("Valid shuffle: " +shufflestrings(str1, str2, str3));
     }
 
@@ -18,7 +17,7 @@ public class solution_2 {
         int i = 0, j = 0, k = 0;
         if (str1.length() + str2.length() != CheckInString.length()) {
             return false;
-            //System.out.println("invalid Shuffle");
+
         }
         while (k < CheckInString.length()) {
             if (i < str1.length() && str1.charAt(i) == CheckInString.charAt(k)) {
@@ -27,16 +26,16 @@ public class solution_2 {
                 j++;
             } else {
                 return false;
-                //System.out.println("invalid Shuffle");
+
             }
             k++;
         }
         if (!(i == str1.length() && j == str2.length() && k == CheckInString.length())) {
             return false;
-            //System.out.println("invalid Shuffle");
+
         }
             return true;
-            //System.out.println("valid Shuffle");
+            
         }
     }
 
