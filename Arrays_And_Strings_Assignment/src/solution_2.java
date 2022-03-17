@@ -3,17 +3,22 @@ import java.util.*;
 public class solution_2 {
     public static void main(String args[]) {
         Scanner scan = new Scanner(System.in);
+        System.out.println("Give str1:");
         String str1 = scan.nextLine();
-        String str2 = scan.nextLine();;
-        String str3 = scan.nextLine();;
-        System.out.println("The given string is: " + str3);
-        System.out.println("The interleaving strings are " + str1 + " and " + str2);
-        System.out.println("The given string is interleaving: " + checkInterleaved(str1, str2, str3));
+        System.out.println("Give str2:");
+        String str2 = scan.nextLine();
+        System.out.println("Give str3:");
+        String str3 = scan.nextLine();
+        //System.out.println("The given string is: " + str3);
+        //System.out.println("The interleaving strings are " + str1 + " and " + str2);
+        System.out.println("Valid shuffle: " +shufflestrings(str1, str2, str3));
     }
-    private static boolean checkInterleaved(String str1, String str2, String CheckInString) {
+
+    private static boolean shufflestrings(String str1, String str2, String CheckInString) {
         int i = 0, j = 0, k = 0;
         if (str1.length() + str2.length() != CheckInString.length()) {
             return false;
+            //System.out.println("invalid Shuffle");
         }
         while (k < CheckInString.length()) {
             if (i < str1.length() && str1.charAt(i) == CheckInString.charAt(k)) {
@@ -22,14 +27,18 @@ public class solution_2 {
                 j++;
             } else {
                 return false;
+                //System.out.println("invalid Shuffle");
             }
             k++;
         }
         if (!(i == str1.length() && j == str2.length() && k == CheckInString.length())) {
             return false;
+            //System.out.println("invalid Shuffle");
         }
-        return true;
+            return true;
+            //System.out.println("valid Shuffle");
+        }
     }
-}
+
 
 
