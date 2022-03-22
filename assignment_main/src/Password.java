@@ -25,7 +25,7 @@ public class Password extends Connection_sql {
                 return "Password should contain at least one digit(0-9)";
             }
         }
-//“@ #  &  % * ! ”
+
 
         if (!(password.contains("@") || password.contains("#")
                 || password.contains("!")

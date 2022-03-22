@@ -7,7 +7,7 @@ import java.util.Set;
 public class Connection_sql {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Set<String> set= new HashSet<String>();
+        
         String jdbcURL = "jdbc:mysql://localhost:3306/login";
         String username = "root";
         String password = "root";
@@ -47,7 +47,7 @@ public class Connection_sql {
                     System.out.println("--Registration--");
                     System.out.println("Enter Username: ");
                     String runame = sc.next();
-                    set.add(runame);
+                    //set.add(runame);
                     System.out.println("Enter Password: ");
                     String rpswd = sc.next();
                     Password pv = new Password();
